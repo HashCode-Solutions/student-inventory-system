@@ -101,13 +101,4 @@ public class BulkStudentRecordsDetailServiceImpl implements BulkStudentRecordsDe
         return bulkStudentRecordsDetailRepository.findAllBulkStudentRecordsDetails();
     }
 
-    private List<BulkStudentRecordsDetailDto> formatToDto(List<BulkStudentRecordsDetail> recordsDetails){
-        List<BulkStudentRecordsDetailDto> newRecords = new ArrayList<>();
-        for (BulkStudentRecordsDetail recordsDetail : recordsDetails) {
-            BulkStudentRecordsDetailDto bulkStudentRecordsDetailDto = new BulkStudentRecordsDetailDto();
-            BeanUtils.copyProperties(recordsDetail,bulkStudentRecordsDetailDto);
-            newRecords.add(bulkStudentRecordsDetailDto);
-        }
-        return newRecords;
-    }
 }
