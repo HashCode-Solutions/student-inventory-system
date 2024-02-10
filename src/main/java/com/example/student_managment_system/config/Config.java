@@ -13,7 +13,7 @@ public class Config {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("http://localhost:8080");
+                registry.addMapping("/**").allowedOrigins("*"); //change this to localhost this is not good patrice
             }
         };
     }
